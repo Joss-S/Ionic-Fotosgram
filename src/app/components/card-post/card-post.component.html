@@ -1,0 +1,203 @@
+<ion-grid>
+  <ion-row class="stories-container">
+  
+    <ion-col size="auto">
+      <div class="story">
+        <ion-avatar class="user-story">
+          <img alt="" src="/assets/images/foto8.jpg" />
+        </ion-avatar>
+        <ion-icon class="add-icon" name="add-circle-outline"></ion-icon>
+      </div>
+      <p>Tu historia</p>
+    </ion-col>
+ 
+    <ion-col size="auto">
+      <div class="story">
+        <ion-avatar class="user-story">
+          <img alt="Avatar" src="/assets/images/foto3.jpg">
+        </ion-avatar>
+      </div>
+      <p class="username">Jo.mimida</p>
+    </ion-col>
+
+
+    <ion-col size="auto">
+      <div class="story">
+        <ion-avatar class="user-story">
+          <img alt="Avatar" src="/assets/images/foto6.jpg" />
+        </ion-avatar>
+      </div>
+      <p class="username">Abyade</p>
+    </ion-col>
+ 
+
+  <ion-col size="auto">
+    <div class="story">
+      <ion-avatar class="user-story">
+        <img alt="Avatar" src="/assets/images/foto5.jpg" />
+      </ion-avatar>
+    </div>
+    <p class="username">Alexbs</p>
+  </ion-col>
+
+
+<ion-col size="auto">
+  <div class="story">
+    <ion-avatar class="user-story">
+      <img alt="Avatar" src="/assets/images/foto7.jpg" />
+    </ion-avatar>
+  </div>
+  <p class="username">Yami</p>
+</ion-col>
+
+
+<ion-col size="auto">
+  <div class="story">
+    <ion-avatar class="user-story">
+      <img alt="Avatar" src="/assets/images/foto9.jpg" />
+    </ion-avatar>
+  </div>
+  <p class="username">Madai</p>
+</ion-col>
+</ion-row>
+
+
+  <ion-card>
+    <div style="display: flex; align-items: center; gap: 10px; padding: 10px;">
+      <ion-avatar style="width: 40px; height: 40px;">
+        <img alt="Avatar" src="/assets/images/foto8.jpg" />
+      </ion-avatar>
+      <ion-card-subtitle color="primary">Joss</ion-card-subtitle>
+    </div>
+
+    <img alt="" src="/assets/images/kirby.jpeg" />
+
+    <ion-card-header>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon slot="icon-only" name="heart-outline" class="heart-icon"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon slot="icon-only" name="chatbubble-ellipses-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-card-header>
+
+    <ion-card-content color="primary">
+     Joss Kirbyy
+    </ion-card-content>
+    <ion-item class="ion-no-padding">
+    <ion-buttons slot="start">
+      <ion-icon (click)="selectheart()" style="transform: scale(0.87);" size="large" slot="icon-only"
+       [name]="liked ? 'heart' : 'heart-outline'" color="danger"></ion-icon>
+       <ion-icon style="transform: scale(8,0);" size="large" slot="icon-only" name="chatbubble-ellipses-outline"></ion-icon>
+       <ion-icon style="transform: scale(8,0);" size="large" slot="icon-only" name="paper-plane-outline"></ion-icon>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon (click)="selectbook()" style="transform: scale(0.87);" size="large" slot="icon-only"
+      [name]="saved ? 'bookmark' : 'bookmark-outline'"></ion-icon>  
+    </ion-buttons>
+  </ion-item>
+<ion-item>
+  <ion-label>
+    <strong>
+      {{likes + 10}}
+    </strong>
+  </ion-label>
+</ion-item>
+
+  </ion-card>
+  
+  <ion-card>
+    <div style="display: flex; align-items: center; gap: 10px; padding: 10px;">
+      <ion-avatar style="width: 40px; height: 40px;">
+        <img alt="Avatar" src="/assets/images/foto5.jpg"  />
+      </ion-avatar>
+      <ion-card-subtitle color="primary">Alexbs</ion-card-subtitle>
+    </div>
+
+    <img alt="" src="/assets/images/michi.jpg" />
+
+    <ion-card-header>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon slot="icon-only" name="heart-outline" class="heart-icon"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon slot="icon-only" name="chatbubble-ellipses-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-card-header>
+
+    <ion-card-content color="primary">
+    Hermoso paisaje y un michi
+    </ion-card-content>
+    <ion-item class="ion-no-padding">
+    <ion-buttons slot="start">
+      <ion-icon (click)="selectheart()" style="transform: scale(0.87);" size="large" slot="icon-only"
+       [name]="liked ? 'heart' : 'heart-outline'" color="danger"></ion-icon>
+       <ion-icon style="transform: scale(8,0);" size="large" slot="icon-only" name="chatbubble-ellipses-outline"></ion-icon>
+       <ion-icon style="transform: scale(8,0);" size="large" slot="icon-only" name="paper-plane-outline"></ion-icon>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-icon (click)="selectbook()" style="transform: scale(0.87);" size="large" slot="icon-only"
+      [name]="saved ? 'bookmark' : 'bookmark-outline'"></ion-icon>  
+    </ion-buttons>
+  </ion-item>
+<ion-item>
+  <ion-label>
+    <strong>
+      {{likes + 20}}
+    </strong>
+  </ion-label>
+</ion-item>
+
+
+<ion-card>
+  <div style="display: flex; align-items: center; gap: 10px; padding: 10px;">
+    <ion-avatar style="width: 40px; height: 40px;">
+      <img alt="Avatar" src="/assets/images/foto7.jpg" />
+    </ion-avatar>
+    <ion-card-subtitle color="primary">Yami</ion-card-subtitle>
+  </div>
+
+  <img alt="" src="/assets/images/roblos.png" />
+
+  <ion-card-header>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="heart-outline" class="heart-icon"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="chatbubble-ellipses-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-card-header>
+
+  <ion-card-content color="primary">
+   Saquen el roblox, pasen su cuenta pa jugar
+  </ion-card-content>
+  <ion-item class="ion-no-padding">
+  <ion-buttons slot="start">
+    <ion-icon (click)="selectheart()" style="transform: scale(0.87);" size="large" slot="icon-only"
+     [name]="liked ? 'heart' : 'heart-outline'" color="danger"></ion-icon>
+     <ion-icon style="transform: scale(8,0);" size="large" slot="icon-only" name="chatbubble-ellipses-outline"></ion-icon>
+     <ion-icon style="transform: scale(8,0);" size="large" slot="icon-only" name="paper-plane-outline"></ion-icon>
+  </ion-buttons>
+  <ion-buttons slot="end">
+    <ion-icon (click)="selectbook()" style="transform: scale(0.87);" size="large" slot="icon-only"
+    [name]="saved ? 'bookmark' : 'bookmark-outline'"></ion-icon>  
+  </ion-buttons>
+</ion-item>
+<ion-item>
+<ion-label>
+  <strong>
+    {{likes + 30}}
+  </strong>
+</ion-label>
+</ion-item>
+
+</ion-card>
+  </ion-card>
+  
+</ion-grid>
